@@ -1,0 +1,14 @@
+<a href="#" class="list-group-item clearfix" (click)="onSelectedBook()">
+  <div class="float-start">
+    <h4 class="list-group-item-heading">{{ book?.title }}</h4>
+    <p class="list-group-item-text">{{ book?.description }}</p>
+  </div>
+  <div class="float-end">
+    <img
+      [src]="book?.imgPath"
+      alt=""
+      class="img-responsive"
+      style="max-height: 50px"
+    />
+  </div>
+</a>

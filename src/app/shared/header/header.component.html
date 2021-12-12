@@ -1,0 +1,40 @@
+<nav
+  class="navbar navbar-dark bg-dark navbar-expand-md bg-faded justify-content-center"
+>
+  <div class="container">
+    <a href="#" class="navbar-brand d-flex w-50 mr-auto">My Library</a>
+    <div class="navbar-collapse collapse w-100">
+      <ul class="navbar-nav w-100 justify-content-center">
+        <li class="nav-item active">
+          <a class="nav-link" href="#" (click)="onSelectedFeature('books')"
+            >Books</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="onSelectedFeature('albums')"
+            >Albums</a
+          >
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            #dropDownVc="dropDownDir"
+            appDropdown
+          >
+            Manage
+          </a>
+          <div class="dropdown-menu" [class.show]="dropDownVc?.isShow">
+            <a class="dropdown-item" href="#">Save Data</a>
+            <a class="dropdown-item" href="#">Fetch Data</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
